@@ -1,0 +1,2 @@
+arm-none-eabi-gcc -c -mthumb -march=armv7e-m test.c
+arm-none-eabi-ld -e _reset test.o -Ttext=0x40 -Tbss=0x20000000 -section-start=isr_vector=0
